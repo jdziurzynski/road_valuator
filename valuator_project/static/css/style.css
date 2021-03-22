@@ -1,0 +1,140 @@
+
+.main_container {
+    border: 1px solid black;
+    width:800px;
+    min-height: 200px;
+    margin:200 auto;
+    font-family: 'Open Sans';
+}
+
+#confBox {
+  display: none;
+}
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.viapoints_order {
+  display: none;
+  margin: 0px 0px 10px 0px;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 20px;
+  width: 50%;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.waypoints_data {
+  width: 90%;
+  display: flex;
+}
+
+.viapoints_data {
+  width: 90%;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.viapoint_bttn_box{
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+.location_box {
+    width: 230px;
+    margin: 40px;
+
+}
+
+.via_location_box {
+    min-width: 220px;
+    width: 230px;
+    margin: 0px 10px 0px 40px;
+}
+
+.location_solved_box {
+  max-width: 220px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-size: 14px;
+  color: #218533;
+}
+
+.rate_box {
+  width: 80px;
+  margin-right: 0px;
+}
+
+.calc_btn_box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.calc_btn_box button {
+  width: 150px;
+  padding: 10px;
+  margin: 30 0 30 0;
+}
+
+.avoid_data_box {
+  margin: 30px;
+}
+
+.avoid_data {
+  margin-bottom: 10px;
+}
+
+.result_box {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 40px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ebfced;
+}
+
+.result_data {
+  width: 100%;
+  margin: 20px;
+}
+
+.result_data_label {
+  display: inline-block;
+  width: 40%;
+  text-align: right;
+}
+
+.result_value {
+  display: inline-block;
+  width: 55%;
+  margin-left: 20px;
+  text-align: left;
+}
+
+#costResult {
+  font-weight: bold;
+  font-size: 17px;
+  color: #53b56d;
+}

@@ -1,0 +1,98 @@
+<html>
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href= "{% static 'css/style.css' %}">
+  </head>
+  <body>
+
+
+
+    <div class='main_container'>
+        <div class='tab'>
+          <button class="tablinks" id="searchTab" >Search</button>
+          <button class="tablinks" id="confTab" >Configurations</button>
+        </div>
+
+        <div class='data_box' id='searchBox'>
+          <div class="waypoints_data" onsubmit="return validateForm()">
+            <div class="form-group location_box">
+              <label for="start_location">Start:</label>
+              <input type="text" id="start_location" placeholder="Post Code or Address" class="form-control">
+              <div class='location_solved_box'>
+                <p id="solved_start_address"/>
+              </div>
+            </div>
+            <div class="form-group location_box">
+              <label for="dest_location">Destination:</label>
+              <input type="text" id="dest_location" placeholder="Post Code or Address" class="form-control">
+              <div class='location_solved_box'>
+                <p id="solved_dest_address"/>
+              </div>
+            </div>
+            <div class="form-group location_box rate_box">
+                <label for="rate">Rate:</label>
+                <input type="number" value="1" step="0.01" id="rate" placeholder="Rate" class="form-control">
+            </div>
+          </div>
+
+          <div id="viaPointsDataBox" class="viapoints_data" onsubmit="return validateForm()">
+          </div>
+
+          <div class='viapoint_bttn_box' id='viaPointsBox'>
+            <div class="form-check viapoints_order" id='viapointsOrder'>
+              <input class="form-check-input" type="checkbox" value="" id="optimizeViaPoints">
+              <label class="form-check-label" for="optimizeViaPoints">Optimize Via Points</label>
+            </div>
+            <button type="button" id='addViaPoint' class="btn btn-info" >Add Via Point</button>
+          </div>
+
+
+
+          <div class='calc_btn_box'>
+            <button type="button" id='calculateRoad' class="btn btn-success" >Calculate</button>
+          </div>
+            <div class='result_box' id='resultBox'>
+              <div class='result_data'>
+                <div class='result_data_label'><span>Start:</span></div><div id='startResultBox'class='result_value'><p id='startResult'/></div>
+                <div id='viasBoxResult'>
+                </div>
+                <div class='result_data_label'><span>Destination:</span></div><div class='result_value'><p id='destResult'/></div>
+                <div class='result_data_label'><span>Avoid:</span></div><div class='result_value'><p id='avoidResult'/></div>
+              </div>
+              <div class='result_data'>
+                <div class='result_data_label'><span>Distance:</span></div><div class='result_value'><p id='distanceResult'/></div>
+                <div class='result_data_label'><span>Est. Duration:</span></div><div class='result_value'><p id='durationResult'/></div>
+                <div class='result_data_label'><span>Cost:</span></div><div class='result_value'><p id='costResult'/></div>
+              </div>
+            </div>
+        </div>
+
+        <div class='data_box' id='confBox'>
+          <div class="waypoints_data" onsubmit="return validateForm()">
+            <div class='avoid_data_box'>
+              <div><p>Avoid:</p></div>
+              <div class="form-check avoid_data">
+                <input class="form-check-input" type="checkbox" value="" id="highways_check">
+                <label class="form-check-label" for="highways_check">Highways</label>
+              </div>
+              <div class="form-check avoid_data">
+                <input class="form-check-input" type="checkbox" value="" id="tolls_check">
+                <label class="form-check-label" for="tolls_check">Tolls</label>
+              </div>
+              <div class="form-check avoid_data">
+                <input class="form-check-input" type="checkbox" value="" id="bordercrossing_check">
+                <label class="form-check-label" for="bordercrossing_check">Border Crossing</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
